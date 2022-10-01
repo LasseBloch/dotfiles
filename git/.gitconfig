@@ -1,0 +1,16 @@
+[user]
+	name = lassebloch
+	email = lassebloch@gmail.com
+
+[alias]
+	st = status
+        co = checkout
+	ls = "!git --no-pager log --oneline"
+	lst = ls -10
+        tell = rev-parse --abbrev-ref HEAD
+        common = "!f() { git merge-base HEAD ${1:-master} | xargs git log --oneline -n 1; }; f"
+        fc = "!f() { git branch -a | grep -m1 -e ${1}.*${2} | sed \"s/remotes\\/origin\\///\" | xargs git checkout; }; f"
+        lol = "!f() { git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'; }; f"
+        amendcommit = commit --amend --no-edit
+[core]
+	editor = vim
