@@ -2,7 +2,9 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/bl0ch/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
+. $HOME/.asdf/asdf.sh
+
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -72,12 +74,24 @@ ZSH_THEME="agnoster"
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git)
 
-plugins=(history colored-man-pages)
+plugins=(history colored-man-pages asdf ssh-agent git podman)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
+rga-fzf() {
+	RG_PREFIX="rga --files-with-matches"
+	local file
+	file="$(
+		FZF_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
+			fzf --sort --preview="[[ ! -z {} ]] && rga --pretty --context 5 {q} {}" \
+				--phony -q "$1" \
+				--bind "change:reload:$RG_PREFIX {q}" \
+				--preview-window="70%:wrap"
+	)" &&
+	echo "opening $file" &&
+	$EDITOR "$file"
+}
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -102,4 +116,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export EDITOR=hx
+PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+PATH="$HOME/language-servers/elixir:$PATH"
 alias npdiff="git --no-pager diff"
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+#alias python="/usr/bin/python2.7"
+#alias python="/usr/bin/python3"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
