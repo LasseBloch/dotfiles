@@ -12,3 +12,7 @@ Or really it is more dotfiles and other configuration stuff
  * [fzf](https://github.com/junegunn/fzf)
  * [rba grep](https://github.com/phiresky/ripgrep-all)
  * [Helix editor](https://github.com/helix-editor/helix)
+
+
+all except helix should be stowd in ~
+ stow -t ~/.config/helix helix

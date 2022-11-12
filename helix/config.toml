@@ -1,0 +1,5 @@
+theme="dracula"
+
+[keys.insert]
+# jk to enter normal mode
+j = { k = "normal_mode" }
