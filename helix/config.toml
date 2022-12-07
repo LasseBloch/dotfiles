@@ -3,3 +3,17 @@ theme="dracula"
 [keys.insert]
 # jk to enter normal mode
 j = { k = "normal_mode" }
+
+[keys.normal]
+C-u = ["half_page_up", "align_view_center"]
+C-d = ["half_page_down", "align_view_center"]
+
+[editor]
+bufferline = "multiple"
+rulers = [120]
+line-number = "relative"
+cursorline = true
+color-modes	= true
+[editor.indent-guides]
+render = true
+character = "╎"
