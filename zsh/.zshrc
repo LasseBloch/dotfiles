@@ -73,7 +73,13 @@ ZSH_THEME="agnoster"
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git)
 
-plugins=(history colored-man-pages asdf ssh-agent git podman)
+plugins=(history colored-man-pages asdf ssh-agent git tmux podman)
+
+# tmux plugin config
+# https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/tmux/README.md
+# Automatically starts tmux, this will ensure a new tmux session is either 
+# launched or connected to a startup
+export ZSH_TMUX_AUTOSTART=true
 
 source $ZSH/oh-my-zsh.sh
 
