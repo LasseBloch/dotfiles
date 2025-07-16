@@ -1,0 +1,3 @@
+theme = dark:catppuccin-mocha,light:catppuccin-latte
+shell-integration = zsh
+copy-on-select = true
