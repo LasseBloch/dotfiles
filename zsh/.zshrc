@@ -3,7 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-. $HOME/.asdf/asdf.sh
+. /usr/local/opt/asdf/libexec/asdf.sh
 
 
 # Set name of the theme to load --- if set to "random", it will
@@ -11,7 +11,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="agnoster"
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -93,6 +92,7 @@ rga-fzf() {
 	$EDITOR "$file"
 }
 
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -116,12 +116,13 @@ rga-fzf() {
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export EDITOR=hx
+export EDITOR=nvim
 PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 PATH="$HOME/language-servers/elixir:$PATH"
-alias npdiff="git --no-pager diff"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+alias npdiff="git --no-pager diff"
 #alias python="/usr/bin/python2.7"
 #alias python="/usr/bin/python3"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
