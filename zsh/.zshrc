@@ -81,6 +81,9 @@ plugins=(history colored-man-pages asdf ssh-agent git tmux podman)
 # launched or connected to a startup
 export ZSH_TMUX_AUTOSTART=true
 
+# startship 
+ eval "$(starship init zsh)"
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
