@@ -76,11 +76,8 @@ ZSH_THEME=""
 plugins=(history colored-man-pages asdf ssh-agent git tmux podman)
 
 # tmux plugin config
+# See below for configuration
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/tmux/README.md
-# Automatically starts tmux, this will ensure a new tmux session is either 
-# launched or connected to a startup
-export ZSH_TMUX_AUTOSTART=true
-
 # startship 
  eval "$(starship init zsh)"
 
