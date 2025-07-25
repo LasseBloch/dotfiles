@@ -73,7 +73,7 @@ ZSH_THEME=""
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git)
 
-plugins=(history colored-man-pages asdf ssh-agent git tmux podman)
+plugins=(history colored-man-pages asdf ssh-agent git tmux aliases podman)
 
 # tmux plugin config
 # See below for configuration
