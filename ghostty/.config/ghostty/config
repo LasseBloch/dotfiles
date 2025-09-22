@@ -1,3 +1,7 @@
 theme = dark:catppuccin-mocha,light:catppuccin-latte
 shell-integration = zsh
 copy-on-select = true
+ 
+font-family = "JetBrainsMono Nerd Font Mono"
+font-thicken
+font-feature = -liga
