@@ -3,7 +3,6 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-. /usr/local/opt/asdf/libexec/asdf.sh
 
 
 # Set name of the theme to load --- if set to "random", it will
@@ -130,5 +129,12 @@ alias npdiff="git --no-pager diff"
 #alias python="/usr/bin/python2.7"
 #alias python="/usr/bin/python3"
 
+# Load fzf keybindings (including ctrl-r for history search)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
+[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
 
+eval "$(/home/bl0ch/.local/bin/mise activate zsh)"
+
+# Initialize zoxide for 'z' command
+eval "$(zoxide init zsh)"
